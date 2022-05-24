@@ -1,0 +1,19 @@
+.featured {
+  padding: 4rem;
+  .featured-item {
+    display: flex;
+
+    .text {
+      margin-right: 2rem;
+      padding: 2rem;
+
+      p {
+          line-height: 2.5;
+      }
+    }
+
+    img {
+      width: 50%;
+    }
+  }
+}

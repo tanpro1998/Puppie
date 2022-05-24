@@ -1,0 +1,23 @@
+.btn-top {
+  position: fixed;
+  bottom: 150px;
+  right: 1rem;
+  padding: 5px;
+  width: 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: gray;
+  color: white;
+  animation: scroll 0.3s alternate ;
+  z-index: 999;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

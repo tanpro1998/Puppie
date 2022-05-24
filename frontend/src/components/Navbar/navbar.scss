@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rem;
+  height: 80px;
+  border-bottom: 1px solid gray;
+  position: fixed;
+  top: 0;
+  width:100%;
+  z-index: 999;
+  background-color: white;
+  transition: all .3s ease;
+
+  .left {
+      span {
+          font-size: 30px;
+          font-weight: bold;
+      }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    &__item {
+      cursor: pointer;
+    }
+
+    &__item.active {
+        font-weight: bold;
+        color: #1789ff;
+    }
+  }
+}
+
+.shrink {
+  height: 50px;
+}

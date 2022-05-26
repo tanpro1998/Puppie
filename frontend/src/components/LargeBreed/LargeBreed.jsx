@@ -1,32 +1,25 @@
-import React from 'react'
-import "./largeBreed.scss"
+import React from "react";
+import "./largeBreed.scss";
+import { useSelector } from "react-redux";
 
 const LargeBreed = () => {
+  const { dogs } = useSelector((state) => state.dogs);
+  const largeDogs = dogs.filter((dog) => dog.size === "large");
   return (
-    <div className="large">
+    <div className="large" id="lg">
       <div className="title">
         <h1>LARGE BREEDS</h1>
       </div>
       <div className="card">
-        <div className="card-item">
-          <img src="/image/large-dog.jpg" alt="" />
-          <span className="name">Name</span>
-        </div>
-        <div className="card-item">
-          <img src="/image/large-dog.jpg" alt="" />
-          <span className="name">Name</span>
-        </div>
-        <div className="card-item">
-          <img src="/image/large-dog.jpg" alt="" />
-          <span className="name">Name</span>
-        </div>
-        <div className="card-item">
-          <img src="/image/large-dog.jpg" alt="" />
-          <span className="name">Name</span>
-        </div>
+        {largeDogs.map((dog, index) => (
+          <div className="card-item" key={index}>
+            <img src={dog.image} alt="" />
+            <span className="name">{dog.name}</span>
+          </div>
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LargeBreed
+export default LargeBreed;

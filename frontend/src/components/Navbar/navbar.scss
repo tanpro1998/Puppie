@@ -7,16 +7,16 @@
   border-bottom: 1px solid gray;
   position: fixed;
   top: 0;
-  width:100%;
+  width: 100%;
   z-index: 999;
   background-color: white;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 
   .left {
-      span {
-          font-size: 30px;
-          font-weight: bold;
-      }
+    span {
+      font-size: 30px;
+      font-weight: bold;
+    }
   }
 
   .right {
@@ -29,8 +29,14 @@
     }
 
     &__item.active {
-        font-weight: bold;
-        color: #1789ff;
+      font-weight: bold;
+      color: #1789ff;
+    }
+  }
+
+  .hover {
+    &:hover .dropdown {
+      display: block;
     }
   }
 }

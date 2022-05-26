@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./navbar.scss";
+import { DownOutlined } from "@ant-design/icons";
+import Dropdown from "../Dropdown/Dropdown";
 
 const mainNav = [
   {
@@ -8,7 +10,7 @@ const mainNav = [
     path: "/",
   },
   { display: "All Available Puppies", path: "/available" },
-  { display: "Puppies For Sale", path: "/sale" },
+  { display: "Puppies For Sale", path: "/sale", type: "dropdown" },
   { display: "Blog", path: "/blog" },
   { display: "Contact", path: "/contact" },
 ];
@@ -47,7 +49,15 @@ const Navbar = () => {
             onClick={menuToggle}
           >
             <Link to={item.path} style={{ color: "inherit" }}>
-              <span>{item.display}</span>
+              {item.type ? (
+                <span className="hover">
+                  {item.display}
+                  <DownOutlined />
+                  <Dropdown />
+                </span>
+              ) : (
+                <span>{item.display}</span>
+              )}
             </Link>
           </div>
         ))}

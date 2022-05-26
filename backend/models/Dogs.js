@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const dogSchema = new mongoose.Schema(
+const dogsSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -8,6 +8,10 @@ const dogSchema = new mongoose.Schema(
       unique: true,
     },
     breed: {
+      type: String,
+      required: true,
+    },
+    size: {
       type: String,
       required: true,
     },
@@ -27,6 +31,6 @@ const dogSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Dog = mongoose.model("Dog", dogSchema);
+const Dogs = mongoose.model("Dogs", dogsSchema);
 
-export default Dog;
+export default Dogs;

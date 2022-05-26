@@ -1,5 +1,6 @@
 import React from "react";
 import "./puppieItem.scss";
+import number from "../../utils/number"
 
 const PuppieItem = ({ item }) => {
   return (
@@ -21,7 +22,7 @@ const PuppieItem = ({ item }) => {
           </span>
           <span>
             <b>Price: </b>
-            {item.price} VND
+            {number(item.price)} VND
           </span>
         </div>
       </div>

@@ -5,7 +5,6 @@ import Helmet from "../../components/Helmet/Helmet";
 import Header from "../../components/Header/Header";
 import Select from "../../components/Select/Select";
 import SmallBreed from "../../components/SmallBreed/SmallBreed";
-// import Grid from "../../components/Grid/Grid";
 import LargeBreed from "../../components/LargeBreed/LargeBreed";
 import MixBreed from "../../components/MixBreed/MixBreed";
 import TopScroll from "../../components/TopScroll/TopScroll";

@@ -1,69 +1,68 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "./dropDown.scss";
+import { Link } from "react-router-dom";
 
 const Dropdown = () => {
+  const { dogs } = useSelector((state) => state.dogs);
+  const smallBreed = dogs.filter((dog) => dog.size === "small");
+  const largeBreed = dogs.filter((dog) => dog.size === "large");
+  const mixBreed = dogs.filter((dog) => dog.size === "mix");
+
   return (
     <div className="dropdown">
       <div className="wrapper">
         <div className="item">
           <h2>Small Breeds</h2>
-          <div className="name">
-            <span>Biewer</span>
-            <span>BiChon</span>
-            <span>Corgi</span>
-            <span>Chihuahua</span>
-            <span>Pug</span>
-            <span>Shih Tzu</span>
-            <span>French Bulldog</span>
-            <span>Japanese Spitz</span>
-            <span>Maltese</span>
-            <span>Toy Poodle</span>
-          </div>
+          {smallBreed.map((item, index) => (
+            <div className="name" key={index}>
+              <Link
+                to={`/${item.breed}`}
+                style={{ color: "inherit", margin: "1rem" }}
+              >
+                <span>{item.name}</span>
+              </Link>
+            </div>
+          ))}
         </div>
         <div className="item">
           <h2>Large Breeds</h2>
-          <div className="name">
-            <span>Biewer</span>
-            <span>BiChon</span>
-            <span>Corgi</span>
-            <span>Chihuahua</span>
-            <span>Pug</span>
-            <span>Shih Tzu</span>
-            <span>French Bulldog</span>
-            <span>Japanese Spitz</span>
-            <span>Maltese</span>
-            <span>Toy Poodle</span>
-          </div>
+          {largeBreed.map((item, index) => (
+            <div className="name" key={index}>
+              <Link
+                to={`/${item.breed}`}
+                style={{ color: "inherit", margin: "1rem" }}
+              >
+                <span>{item.name}</span>
+              </Link>
+            </div>
+          ))}
         </div>
         <div className="item">
-          <h2>Mix Breeds</h2>
-          <div className="name">
-            <span>Biewer</span>
-            <span>BiChon</span>
-            <span>Corgi</span>
-            <span>Chihuahua</span>
-            <span>Pug</span>
-            <span>Shih Tzu</span>
-            <span>French Bulldog</span>
-            <span>Japanese Spitz</span>
-            <span>Maltese</span>
-            <span>Toy Poodle</span>
-          </div>
+          <h2>Large Breeds</h2>
+          {mixBreed.map((item, index) => (
+            <div className="name" key={index}>
+              <Link
+                to={`/${item.breed}`}
+                style={{ color: "inherit", margin: "1rem" }}
+              >
+                <span>{item.name}</span>
+              </Link>
+            </div>
+          ))}
         </div>
         <div className="item">
-          <h2>Approved Breeds</h2>
-          <div className="name">
-            <span>Biewer</span>
-            <span>BiChon</span>
-            <span>Corgi</span>
-            <span>Chihuahua</span>
-            <span>Pug</span>
-            <span>Shih Tzu</span>
-            <span>French Bulldog</span>
-            <span>Japanese Spitz</span>
-            <span>Maltese</span>
-            <span>Toy Poodle</span>
-          </div>
+          <h2>Large Breeds</h2>
+          {smallBreed.map((item, index) => (
+            <div className="name" key={index}>
+              <Link
+                to={`/${item.breed}`}
+                style={{ color: "inherit", margin: "1rem" }}
+              >
+                <span>{item.name}</span>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </div>

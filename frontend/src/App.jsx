@@ -6,6 +6,7 @@ import Contact from "./pages/Contact/Contact";
 import Home from "./pages/Home/Home";
 import { useDispatch } from "react-redux";
 import { getAllAvailable, getAllDogs } from "./redux/API";
+import Sale from "./pages/Sale/Sale";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/available" element={<Available />} />
-        <Route path="/sale" element={<Home />} />
+        <Route path="/:slug" element={<Sale />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

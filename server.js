@@ -22,10 +22,6 @@ mongoose.connect(process.env.MONGO_URL, () => {
   console.log("MongoDB Connected");
 });
 
-app.get("/", (req, res) => {
-  res.send("Welcome to API...");
-});
-
 app.use(express.json());
 app.use(cors());
 

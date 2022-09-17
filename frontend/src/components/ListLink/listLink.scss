@@ -1,0 +1,27 @@
+.list {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 4rem;
+
+  .list-item {
+      h2 {
+          font-weight: bold;
+      }
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-decoration: underline;
+
+      span {
+          cursor: pointer;
+
+          a {
+            // color: black;
+            text-transform: capitalize;
+          }
+      }
+    }
+  }
+}

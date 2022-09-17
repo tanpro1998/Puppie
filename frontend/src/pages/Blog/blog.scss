@@ -1,0 +1,138 @@
+.blog {
+  .blog-header {
+    position: relative;
+    img {
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+      animation: img 3s alternate ease;
+    }
+
+    @keyframes img {
+      from {
+        opacity: 0;
+        transform: scale(1.1);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .blog-text {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      h1,
+      h2 {
+        color: white;
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+      h2 {
+        font-size: 30px;
+      }
+
+      .btn {
+        padding: 20px 40px;
+        background-color: #1789ff;
+        border: none;
+        border-radius: 30px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        &:hover {
+          background-color: darkblue;
+        }
+      }
+    }
+  }
+
+  .blog-card {
+    display: flex;
+    margin: 4rem;
+
+    .card-item {
+      padding: 2rem 5rem;
+      img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      span {
+        text-transform: uppercase;
+        color: #1789ff;
+      }
+    }
+  }
+
+  .blog-letter {
+    position: relative;
+    img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .blog-text {
+      position: absolute;
+      top: 35%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+          color: white;
+          font-size: 40px;
+        }
+        input {
+          padding: 10px;
+          width: 500px;
+          border: 2px solid #1789ff;
+          border-radius: 20px;
+          padding-left: 20px;
+          outline: none;
+          margin-bottom: 2rem;
+          background-color: transparent;
+          color: white;
+        }
+
+        .btn {
+          padding: 10px 15px;
+          background-color: #1789ff;
+          border: none;
+          border-radius: 30px;
+          color: white;
+          font-size: 20px;
+          width: 200px;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: darkblue;
+          }
+        }
+      }
+    }
+  }
+}

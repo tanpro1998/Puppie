@@ -66,6 +66,7 @@ const Available = () => {
     });
     window.scrollTo(0, 0);
   }, []);
+  console.log(showTopButton);
   return (
     <div className="available">
       <Helmet title="Available Page">
@@ -79,7 +80,6 @@ const Available = () => {
             <h1>All Available Puppies</h1>
             <p>Only the Best for Our Best Friends</p>
             <span className="get-new" onClick={() => window.location.reload()}>
-              {" "}
               <LoadingOutlined className="loading" />
               Get notified with our latest puppies
             </span>
@@ -118,7 +118,6 @@ const Available = () => {
         <Puppies id="dog_24" dog={goldenRetriever} />
         <Puppies id="dog_25" dog={labrador} />
         <Puppies id="dog_26" dog={shibaInu} />
-
         {showTopButton && <TopScroll />}
       </Helmet>
     </div>

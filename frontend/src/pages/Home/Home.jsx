@@ -11,33 +11,43 @@ import TopScroll from "../../components/TopScroll/TopScroll";
 import Approved from "../../components/Approved/Approved";
 import Featured from "../../components/Featured/Featured";
 import Footer from "../../components/Footer/Footer";
+import Grid from "../../components/Grid/Grid";
 
 const Home = () => {
   const [showTopButton, setShowTopButton] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 400) {
-        setShowTopButton(true);
-      } else {
-        setShowTopButton(false);
-      }
-    });
+    const handleShow = () => {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+          setShowTopButton(true);
+        } else {
+          setShowTopButton(false);
+        }
+      });
+    };
+    handleShow();
+    return () => {
+      window.removeEventListener("scroll", handleShow);
+    };
   }, []);
+  console.log(showTopButton)
 
   return (
     <div className="home">
       <Helmet title="Home Page">
-        <Navbar />
-        <Header />
-        <Select />
-        <SmallBreed />
-        <LargeBreed />
-        <MixBreed />
-        <Approved />
-        <Featured />
-        <Footer />
-        {showTopButton && <TopScroll />}
+        <Grid col={3} mdCol={4} smCol={12}>
+          <Navbar />
+          <Header />
+          <Select />
+          <SmallBreed />
+          <LargeBreed />
+          <MixBreed />
+          <Approved />
+          <Featured />
+          <Footer />
+          {showTopButton && <TopScroll />}
+        </Grid>
       </Helmet>
     </div>
   );

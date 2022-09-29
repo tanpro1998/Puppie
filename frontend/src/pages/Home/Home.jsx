@@ -31,7 +31,6 @@ const Home = () => {
       window.removeEventListener("scroll", handleShow);
     };
   }, []);
-  console.log(showTopButton)
 
   return (
     <div className="home">

@@ -45,7 +45,6 @@ const Blog = () => {
             </h2>
             <span>Hair & skin care</span>
             <p>
-              {" "}
               If you live in Singapore, you are probably familiar with the
               concept of an HDB flat. These living units are designed for family
               groups and couples. They rank among some of the most expensive
@@ -64,7 +63,6 @@ const Blog = () => {
             </h2>
             <span>PUPPY FOOD</span>
             <p>
-              {" "}
               Preparation of homemade foods is advantageous, but at times it can
               be tiring and tedious, don't worry raw foods is the perfect
               alternative while still offering all-around healthy benefits for
@@ -83,7 +81,6 @@ const Blog = () => {
             </h2>
             <span>GROOMING</span>
             <p>
-              {" "}
               Owning a pet is a life fulfilling experience, we all want our pets
               to look beautiful and stylish and also to have the most attractive
               scent that will be the envy of most. Grooming is very important to

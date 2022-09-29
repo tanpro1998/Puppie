@@ -62,3 +62,29 @@
     }
   }
 }
+
+@media screen and (max-width: 820px) {
+  .puppies {
+    .puppies-img {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .puppies {
+    .puppies-link {
+      h2 {
+        font-size: 20px;
+      }
+
+      .link {
+        flex-direction: column;
+        .same {
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}

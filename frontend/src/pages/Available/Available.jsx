@@ -66,7 +66,6 @@ const Available = () => {
     });
     window.scrollTo(0, 0);
   }, []);
-  console.log(showTopButton);
   return (
     <div className="available">
       <Helmet title="Available Page">
@@ -92,32 +91,34 @@ const Available = () => {
         </div>
         <div className="available-main"></div>
         <ListLink />
-        <Puppies id="dog_1" dog={beagle} />
-        <Puppies id="dog_2" dog={bichon} />
-        <Puppies id="dog_3" dog={cavalier} />
-        <Puppies id="dog_4" dog={cockapoo} />
-        <Puppies id="dog_5" dog={chihuahua} />
-        <Puppies id="dog_6" dog={pug} />
-        <Puppies id="dog_7" dog={husky} />
-        <Puppies id="dog_8" dog={dachshund} />
-        <Puppies id="dog_9" dog={japaneseSpitz} />
-        <Puppies id="dog_10" dog={jackRusselTerrier} />
-        <Puppies id="dog_11" dog={maltese} />
-        <Puppies id="dog_12" dog={shinTzu} />
-        <Puppies id="dog_13" dog={beaglier} />
-        <Puppies id="dog_14" dog={cavapoo} />
-        <Puppies id="dog_15" dog={labradoodle} />
-        <Puppies id="dog_16" dog={pomSky} />
-        <Puppies id="dog_17" dog={maltipoo} />
-        <Puppies id="dog_18" dog={morkie} />
-        <Puppies id="dog_19" dog={britishBulldog} />
-        <Puppies id="dog_20" dog={borderCollie} />
-        <Puppies id="dog_21" dog={corgi} />
-        <Puppies id="dog_22" dog={chowchow} />
-        <Puppies id="dog_23" dog={frenchBulldog} />
-        <Puppies id="dog_24" dog={goldenRetriever} />
-        <Puppies id="dog_25" dog={labrador} />
-        <Puppies id="dog_26" dog={shibaInu} />
+        <div className="availableContainer">
+          <Puppies id="dog_1" dog={beagle} />
+          <Puppies id="dog_2" dog={bichon} />
+          <Puppies id="dog_3" dog={cavalier} />
+          <Puppies id="dog_4" dog={cockapoo} />
+          <Puppies id="dog_5" dog={chihuahua} />
+          <Puppies id="dog_6" dog={pug} />
+          <Puppies id="dog_7" dog={husky} />
+          <Puppies id="dog_8" dog={dachshund} />
+          <Puppies id="dog_9" dog={japaneseSpitz} />
+          <Puppies id="dog_10" dog={jackRusselTerrier} />
+          <Puppies id="dog_11" dog={maltese} />
+          <Puppies id="dog_12" dog={shinTzu} />
+          <Puppies id="dog_13" dog={beaglier} />
+          <Puppies id="dog_14" dog={cavapoo} />
+          <Puppies id="dog_15" dog={labradoodle} />
+          <Puppies id="dog_16" dog={pomSky} />
+          <Puppies id="dog_17" dog={maltipoo} />
+          <Puppies id="dog_18" dog={morkie} />
+          <Puppies id="dog_19" dog={britishBulldog} />
+          <Puppies id="dog_20" dog={borderCollie} />
+          <Puppies id="dog_21" dog={corgi} />
+          <Puppies id="dog_22" dog={chowchow} />
+          <Puppies id="dog_23" dog={frenchBulldog} />
+          <Puppies id="dog_24" dog={goldenRetriever} />
+          <Puppies id="dog_25" dog={labrador} />
+          <Puppies id="dog_26" dog={shibaInu} />
+        </div>
         {showTopButton && <TopScroll />}
       </Helmet>
     </div>

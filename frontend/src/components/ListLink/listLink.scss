@@ -18,9 +18,23 @@
           cursor: pointer;
 
           a {
-            // color: black;
             text-transform: capitalize;
           }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 414px ) {
+  .list {
+    .list-item {
+      padding: 1rem;
+      margin: 0 auto;
+      width: 80%;
+
+      h2 {
+        font-size: 20px;
       }
     }
   }

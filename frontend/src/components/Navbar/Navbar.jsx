@@ -23,12 +23,13 @@ const mainNav = [
 const Navbar = () => {
   const { pathname } = useLocation();
   const activeNav = mainNav.findIndex((e) => e.path === pathname);
-  const navRef = useRef("");
-  const menuRef = useRef(null);
   const menuToggle = () => menuRef.current.classList.toggle("active");
   const [shrink, setShrink] = useState("");
   const [show, setShow] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+
+  const navRef = useRef("");
+  const menuRef = useRef(null);
   const container = useRef();
 
   const scrollEvent = () => {
@@ -60,9 +61,9 @@ const Navbar = () => {
       <div className={`navbar ${shrink}`} ref={navRef}>
         <div className="menu-toggle" onClick={() => setShowMenu(!showMenu)}>
           {showMenu ? (
-            <CloseOutlined style={{ color: "white" }} />
+            <CloseOutlined style={{ color: "white", cursor: "pointer" }} />
           ) : (
-            <MenuOutlined />
+            <MenuOutlined style={{ cursor: "pointer" }} />
           )}
         </div>
         <div className="left">
